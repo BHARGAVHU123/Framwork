@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="20139" started-at="2021-08-01T10:19:28Z" finished-at="2021-08-01T10:19:48Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="20139" started-at="2021-08-01T10:19:28Z" finished-at="2021-08-01T10:19:48Z">
+      <class name="script.ValidLogin">
+        <test-method status="PASS" signature="initReport()[pri:0, instance:script.ValidLogin@3daa422a]" name="initReport" is-config="true" duration-ms="237" started-at="2021-08-01T10:19:27Z" finished-at="2021-08-01T10:19:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initReport -->
+        <test-method status="PASS" signature="startGrid()[pri:0, instance:script.ValidLogin@3daa422a]" name="startGrid" is-config="true" duration-ms="1" started-at="2021-08-01T10:19:28Z" finished-at="2021-08-01T10:19:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startGrid -->
+        <test-method status="PASS" signature="preCondition(java.lang.String, java.lang.String, org.testng.ITestResult)[pri:0, instance:script.ValidLogin@3daa422a]" name="preCondition" is-config="true" duration-ms="9444" started-at="2021-08-01T10:19:28Z" finished-at="2021-08-01T10:19:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@3daa422a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preCondition -->
+        <test-method status="PASS" signature="testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@3daa422a]" name="testValidLogin" duration-ms="330" started-at="2021-08-01T10:19:37Z" data-provider="getDataFromCSV" finished-at="2021-08-01T10:19:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[manager]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:script.ValidLogin@3daa422a]" name="postCondition" is-config="true" duration-ms="703" started-at="2021-08-01T10:19:37Z" finished-at="2021-08-01T10:19:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@3daa422a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCondition -->
+        <test-method status="PASS" signature="preCondition(java.lang.String, java.lang.String, org.testng.ITestResult)[pri:0, instance:script.ValidLogin@3daa422a]" name="preCondition" is-config="true" duration-ms="8690" started-at="2021-08-01T10:19:38Z" finished-at="2021-08-01T10:19:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@3daa422a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preCondition -->
+        <test-method status="PASS" signature="testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@3daa422a]" name="testValidLogin" duration-ms="243" started-at="2021-08-01T10:19:47Z" data-provider="getDataFromCSV" finished-at="2021-08-01T10:19:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[trainee]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[trainee]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:script.ValidLogin@3daa422a]" name="postCondition" is-config="true" duration-ms="699" started-at="2021-08-01T10:19:47Z" finished-at="2021-08-01T10:19:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@3daa422a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCondition -->
+        <test-method status="PASS" signature="publishReport()[pri:0, instance:script.ValidLogin@3daa422a]" name="publishReport" is-config="true" duration-ms="306" started-at="2021-08-01T10:19:48Z" finished-at="2021-08-01T10:19:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- publishReport -->
+      </class> <!-- script.ValidLogin -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
