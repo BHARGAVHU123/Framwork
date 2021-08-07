@@ -44,7 +44,7 @@ public class BaseTest implements IConstant
 	public DBUtils dbUtils;
 	public FileUtils fileUtils;
 	public JSUtil jsUtil;
-	public RobotUtil robotUtil;
+	//public RobotUtil robotUtil;
 	public ScreenShot screenShot;
 	public WebUtil webUtil;
 	
@@ -54,7 +54,7 @@ public class BaseTest implements IConstant
 		dbUtils= new DBUtils(eTest, log4j);
 		fileUtils=new FileUtils(eTest, log4j);
 		jsUtil=new JSUtil(driver, eTest, log4j);
-		robotUtil=new RobotUtil(eTest, log4j);
+		//robotUtil=new RobotUtil(eTest, log4j);
 		screenShot=new ScreenShot(eTest, log4j);
 		webUtil=new WebUtil(eTest, log4j);
 	}
@@ -102,7 +102,7 @@ public class BaseTest implements IConstant
 		dbUtils.eTest=eTest;
 		screenShot.eTest=eTest;
 		jsUtil.eTest=eTest;
-		robotUtil.eTest=eTest;
+		//robotUtil.eTest=eTest;
 		webUtil.eTest=eTest;
 
 		LogReport.log(eTest, log4j, "Extent Test Created", Status.INFO);

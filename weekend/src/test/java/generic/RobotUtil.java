@@ -23,7 +23,7 @@ public class RobotUtil {
 			robot=new Robot();
 		} catch (AWTException e) 
 		{
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		
 		this.eTest=eTest;
