@@ -45,8 +45,8 @@ public class TestListener implements ITestListener {
 		Media media = MediaEntityBuilder.createScreenCaptureFromPath("./../images/"+timeStamp+".png").build();
 		eTest.fail(media);//add it to extent report
 		
-		//eTest.addScreenCaptureFromPath("./../images/"+timeStamp+".png");//adding screenshot at the top
-//		ScreenShot.getScreenShot(filePath);//taking Desktop screenshot
+		eTest.addScreenCaptureFromPath("./../images/"+timeStamp+".png");//adding screenshot at the top
+		baseTest.screenShot.getScreenShot(filePath);//taking Desktop screenshot
 	}
 
 	@Override

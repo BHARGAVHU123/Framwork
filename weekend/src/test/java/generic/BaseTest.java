@@ -6,7 +6,6 @@ import java.net.URL;
 import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
-
 import org.apache.log4j.Logger;
 import org.apache.log4j.spi.RootLogger;
 import org.openqa.selenium.WebDriver;
@@ -63,14 +62,14 @@ public class BaseTest implements IConstant
 	@BeforeSuite
 	public void startGrid() throws IOException
 	{
-		String useGrid = fileUtils.getPropertyValue(settingsPath,"grid");
-		LogReport.log(eTest, log4j, "use Grid?:"+useGrid, Status.INFO);
-		
-		if(useGrid.equalsIgnoreCase("yes")) 
-		{
-			String[] command = {"cmd.exe", "/C", "Start", ".\\remote\\RunMe.bat"};
-	        Runtime.getRuntime().exec(command);
-		}
+//		String useGrid = fileUtils.getPropertyValue(settingsPath,"grid");
+//		LogReport.log(eTest, log4j, "use Grid?:"+useGrid, Status.INFO);
+//		
+//		if(useGrid.equalsIgnoreCase("yes")) 
+//		{
+//			String[] command = {"cmd.exe", "/C", "Start", ".\\remote\\RunMe.bat"};
+//	        Runtime.getRuntime().exec(command);
+//		}
 	}
 	
 	@BeforeSuite
