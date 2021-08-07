@@ -20,7 +20,7 @@
       <![CDATA[Using Grid]]>
     </line>
     <line>
-      <![CDATA[hubURL:http://localhost:4444/wd/hub]]>
+      <![CDATA[hubURL:http://192.168.1.3:4444/wd/hub]]>
     </line>
     <line>
       <![CDATA[Browser:chrome]]>
@@ -71,7 +71,7 @@
       <![CDATA[Using Grid]]>
     </line>
     <line>
-      <![CDATA[hubURL:http://localhost:4444/wd/hub]]>
+      <![CDATA[hubURL:http://192.168.1.3:4444/wd/hub]]>
     </line>
     <line>
       <![CDATA[Browser:chrome]]>
@@ -116,27 +116,27 @@
       <![CDATA[Extent report published]]>
     </line>
   </reporter-output>
-  <suite name="RegressionSuite" duration-ms="19906" started-at="2021-08-07T12:27:09Z" finished-at="2021-08-07T12:27:29Z">
+  <suite name="RegressionSuite" duration-ms="24118" started-at="2021-08-07T12:46:42Z" finished-at="2021-08-07T12:47:06Z">
     <groups>
     </groups>
-    <test name="ChromeTest" duration-ms="19906" started-at="2021-08-07T12:27:09Z" finished-at="2021-08-07T12:27:29Z">
+    <test name="ChromeTest" duration-ms="24118" started-at="2021-08-07T12:46:42Z" finished-at="2021-08-07T12:47:06Z">
       <class name="script.ValidLogin">
-        <test-method status="PASS" signature="initReport()[pri:0, instance:script.ValidLogin@2d8f65a4]" name="initReport" is-config="true" duration-ms="205" started-at="2021-08-07T12:27:09Z" finished-at="2021-08-07T12:27:09Z">
+        <test-method status="PASS" signature="initReport()[pri:0, instance:script.ValidLogin@3b0143d3]" name="initReport" is-config="true" duration-ms="212" started-at="2021-08-07T12:46:41Z" finished-at="2021-08-07T12:46:42Z">
           <reporter-output>
             <line>
               <![CDATA[Extent report initialized]]>
             </line>
           </reporter-output>
         </test-method> <!-- initReport -->
-        <test-method status="PASS" signature="startGrid()[pri:0, instance:script.ValidLogin@2d8f65a4]" name="startGrid" is-config="true" duration-ms="0" started-at="2021-08-07T12:27:09Z" finished-at="2021-08-07T12:27:09Z">
+        <test-method status="PASS" signature="startGrid()[pri:0, instance:script.ValidLogin@3b0143d3]" name="startGrid" is-config="true" duration-ms="0" started-at="2021-08-07T12:46:42Z" finished-at="2021-08-07T12:46:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGrid -->
-        <test-method status="PASS" signature="preCondition(java.lang.String, java.lang.String, org.testng.ITestResult)[pri:0, instance:script.ValidLogin@2d8f65a4]" name="preCondition" is-config="true" duration-ms="9818" started-at="2021-08-07T12:27:10Z" finished-at="2021-08-07T12:27:19Z">
+        <test-method status="PASS" signature="preCondition(java.lang.String, java.lang.String, org.testng.ITestResult)[pri:0, instance:script.ValidLogin@3b0143d3]" name="preCondition" is-config="true" duration-ms="12286" started-at="2021-08-07T12:46:42Z" finished-at="2021-08-07T12:46:55Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
+                <![CDATA[http://192.168.1.3:4444/wd/hub]]>
               </value>
             </param>
             <param index="1">
@@ -146,7 +146,7 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@2d8f65a4] output={null}]]]>
+                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@3b0143d3] output={null}]]]>
               </value>
             </param>
           </params>
@@ -161,7 +161,7 @@
               <![CDATA[Using Grid]]>
             </line>
             <line>
-              <![CDATA[hubURL:http://localhost:4444/wd/hub]]>
+              <![CDATA[hubURL:http://192.168.1.3:4444/wd/hub]]>
             </line>
             <line>
               <![CDATA[Browser:chrome]]>
@@ -195,7 +195,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method status="PASS" signature="testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@2d8f65a4]" name="testValidLogin" duration-ms="387" started-at="2021-08-07T12:27:19Z" data-provider="getDataFromXL" finished-at="2021-08-07T12:27:20Z">
+        <test-method status="PASS" signature="testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@3b0143d3]" name="testValidLogin" duration-ms="670" started-at="2021-08-07T12:46:55Z" data-provider="getDataFromXL" finished-at="2021-08-07T12:46:55Z">
           <params>
             <param index="0">
               <value>
@@ -211,11 +211,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:script.ValidLogin@2d8f65a4]" name="postCondition" is-config="true" duration-ms="95" started-at="2021-08-07T12:27:20Z" finished-at="2021-08-07T12:27:20Z">
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:script.ValidLogin@3b0143d3]" name="postCondition" is-config="true" duration-ms="325" started-at="2021-08-07T12:46:55Z" finished-at="2021-08-07T12:46:56Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@2d8f65a4] output={null}]]]>
+                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@3b0143d3] output={null}]]]>
               </value>
             </param>
           </params>
@@ -231,11 +231,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- postCondition -->
-        <test-method status="PASS" signature="preCondition(java.lang.String, java.lang.String, org.testng.ITestResult)[pri:0, instance:script.ValidLogin@2d8f65a4]" name="preCondition" is-config="true" duration-ms="8628" started-at="2021-08-07T12:27:20Z" finished-at="2021-08-07T12:27:29Z">
+        <test-method status="PASS" signature="preCondition(java.lang.String, java.lang.String, org.testng.ITestResult)[pri:0, instance:script.ValidLogin@3b0143d3]" name="preCondition" is-config="true" duration-ms="9478" started-at="2021-08-07T12:46:56Z" finished-at="2021-08-07T12:47:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
+                <![CDATA[http://192.168.1.3:4444/wd/hub]]>
               </value>
             </param>
             <param index="1">
@@ -245,7 +245,7 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@2d8f65a4] output={null}]]]>
+                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@3b0143d3] output={null}]]]>
               </value>
             </param>
           </params>
@@ -260,7 +260,7 @@
               <![CDATA[Using Grid]]>
             </line>
             <line>
-              <![CDATA[hubURL:http://localhost:4444/wd/hub]]>
+              <![CDATA[hubURL:http://192.168.1.3:4444/wd/hub]]>
             </line>
             <line>
               <![CDATA[Browser:chrome]]>
@@ -294,7 +294,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method status="PASS" signature="testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@2d8f65a4]" name="testValidLogin" duration-ms="274" started-at="2021-08-07T12:27:29Z" data-provider="getDataFromXL" finished-at="2021-08-07T12:27:29Z">
+        <test-method status="PASS" signature="testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@3b0143d3]" name="testValidLogin" duration-ms="333" started-at="2021-08-07T12:47:05Z" data-provider="getDataFromXL" finished-at="2021-08-07T12:47:06Z">
           <params>
             <param index="0">
               <value>
@@ -310,11 +310,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:script.ValidLogin@2d8f65a4]" name="postCondition" is-config="true" duration-ms="79" started-at="2021-08-07T12:27:29Z" finished-at="2021-08-07T12:27:29Z">
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:script.ValidLogin@3b0143d3]" name="postCondition" is-config="true" duration-ms="138" started-at="2021-08-07T12:47:06Z" finished-at="2021-08-07T12:47:06Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@2d8f65a4] output={null}]]]>
+                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@3b0143d3] output={null}]]]>
               </value>
             </param>
           </params>
@@ -330,7 +330,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- postCondition -->
-        <test-method status="PASS" signature="publishReport()[pri:0, instance:script.ValidLogin@2d8f65a4]" name="publishReport" is-config="true" duration-ms="336" started-at="2021-08-07T12:27:29Z" finished-at="2021-08-07T12:27:29Z">
+        <test-method status="PASS" signature="publishReport()[pri:0, instance:script.ValidLogin@3b0143d3]" name="publishReport" is-config="true" duration-ms="437" started-at="2021-08-07T12:47:06Z" finished-at="2021-08-07T12:47:06Z">
           <reporter-output>
             <line>
               <![CDATA[Extent report published]]>
