@@ -2,25 +2,26 @@ package generic;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.spi.RootLogger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
@@ -36,21 +37,39 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 @Listeners(TestListener.class)
 public class BaseTest implements IConstant
 {
+	public static ExtentReports extentReports;
 	public WebDriver driver;
 	public WebDriverWait wait;
-	public static ExtentReports extentReports;
 	public ExtentTest eTest;
+	public Logger log4j;
+	public DBUtils dbUtils;
+	public FileUtils fileUtils;
+	public JSUtil jsUtil;
+	public RobotUtil robotUtil;
+	public ScreenShot screenShot;
+	public WebUtil webUtil;
+	
+	public BaseTest()
+	{
+		log4j=RootLogger.getLogger(this.getClass());
+		dbUtils= new DBUtils(eTest, log4j);
+		fileUtils=new FileUtils(eTest, log4j);
+		jsUtil=new JSUtil(driver, eTest, log4j);
+		robotUtil=new RobotUtil(eTest, log4j);
+		screenShot=new ScreenShot(eTest, log4j);
+		webUtil=new WebUtil(eTest, log4j);
+	}
 
 	@BeforeSuite
 	public void startGrid() throws IOException
 	{
-		String useGrid = FileUtils.getPropertyValue(settingsPath,"grid");
+		String useGrid = fileUtils.getPropertyValue(settingsPath,"grid");
+		LogReport.log(eTest, log4j, "use Grid?:"+useGrid, Status.INFO);
 		
 		if(useGrid.equalsIgnoreCase("yes")) 
 		{
-		//   /c will send remaining inputs as command to cmd
-		String[] command = {"cmd.exe", "/C", "Start", ".\\remote\\RunMe.bat"};
-        Process p =  Runtime.getRuntime().exec(command);
+			String[] command = {"cmd.exe", "/C", "Start", ".\\remote\\RunMe.bat"};
+	        Runtime.getRuntime().exec(command);
 		}
 	}
 	
@@ -60,13 +79,14 @@ public class BaseTest implements IConstant
         extentReports=new ExtentReports();
         ExtentSparkReporter spark=new ExtentSparkReporter(extentPath);
         extentReports.attachReporter(spark);
-        
+        LogReport.log(eTest, log4j, "Extent report initialized", Status.INFO);
 	}
 	
 	@AfterSuite
 	public void publishReport()
 	{
 		extentReports.flush();
+		LogReport.log(eTest, log4j, "Extent report published", Status.INFO);
 	}
 	
 	
@@ -74,106 +94,159 @@ public class BaseTest implements IConstant
 	@BeforeMethod
 	public void preCondition(@Optional(defaultHubURL)String hubURL,@Optional(defaultBrowser)String browser,ITestResult testResult) throws Exception
 	{
+		
+		
 		String testName = testResult.getMethod().getMethodName();
 		eTest = extentReports.createTest(testName);
 		
-		String useGrid = FileUtils.getPropertyValue(settingsPath,"grid");
+		fileUtils.eTest=eTest;
+		dbUtils.eTest=eTest;
+		screenShot.eTest=eTest;
+		jsUtil.eTest=eTest;
+		robotUtil.eTest=eTest;
+		webUtil.eTest=eTest;
+
+		LogReport.log(eTest, log4j, "Extent Test Created", Status.INFO);
+		
+		String useGrid = fileUtils.getPropertyValue(settingsPath,"grid");
+		
+		LogReport.log(eTest, log4j, "Using Grid?:"+useGrid, Status.INFO);
 		
 		if(useGrid.equalsIgnoreCase("yes")) 
 		{
-			eTest.log(Status.INFO,"Using Grid");
+			LogReport.log(eTest, log4j, "Using Grid", Status.INFO);
+			
 			URL url=new URL(hubURL);
-			eTest.log(Status.INFO,"hubURL:"+hubURL);
+			LogReport.log(eTest, log4j, "hubURL:"+hubURL, Status.INFO);
+			
 			DesiredCapabilities capability=new DesiredCapabilities();
 			capability.setBrowserName(browser);
-			eTest.log(Status.INFO,"Browser:"+browser);
+			LogReport.log(eTest, log4j, "Browser:"+browser, Status.INFO);
 			driver=new RemoteWebDriver(url, capability);
+			
+			LogReport.log(eTest, log4j, "Browser launched in grid:"+browser, Status.INFO);
 		}
 		else
 		{
-			eTest.log(Status.INFO,"Using Local System");
-			WebDriverManager.chromedriver().setup();
-			driver=new ChromeDriver();//Home work ---open required browser based on ppt file
+
+			LogReport.log(eTest, log4j, "Using Local System", Status.INFO);
+			String localBrowser = fileUtils.getPropertyValue(settingsPath,"LocalBrowser");
+			if(localBrowser.equals("firefox"))
+			{
+				WebDriverManager.firefoxdriver().setup();
+				driver=new FirefoxDriver();
+				LogReport.log(eTest, log4j, "Launching Firefox Browser", Status.INFO);
+			}
+			else
+			{
+				WebDriverManager.chromedriver().setup();
+				System.setProperty("webdriver.chrome.silentOutput", "true");
+				java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.SEVERE);
+				
+				ChromeOptions c = new ChromeOptions();
+				c.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
+				driver=new ChromeDriver(c);
+				LogReport.log(eTest, log4j, "Launching Chrome Browser", Status.INFO);
+			}
+			
+			LogReport.log(eTest, log4j, "Browser launched in local:"+localBrowser, Status.INFO);
+			
+			EventFiringWebDriver eDriver=new EventFiringWebDriver(driver);
+			eDriver.register(new WebListener(log4j));
+			driver=eDriver;
+			LogReport.log(eTest, log4j, "Webdriver registered to EventFiringWebDriver", Status.INFO);
 		}
 	
+		
+		
 	
-		long ETO = Long.parseLong(FileUtils.getPropertyValue(settingsPath,"ETO"));
+		long ETO = Long.parseLong(fileUtils.getPropertyValue(settingsPath,"ETO"));
 		wait=new WebDriverWait(driver,ETO);
-		eTest.log(Status.INFO,"ETO:"+ETO);
+		LogReport.log(eTest, log4j, "ETO:"+ETO, Status.INFO);
 		
-		long ITO = Long.parseLong(FileUtils.getPropertyValue(settingsPath,"ITO"));
+		long ITO = Long.parseLong(fileUtils.getPropertyValue(settingsPath,"ITO"));
 		driver.manage().timeouts().implicitlyWait(ITO,TimeUnit.SECONDS);
-		eTest.log(Status.INFO,"ITO:"+ITO);
+		LogReport.log(eTest, log4j, "ITO:"+ITO, Status.INFO);
 		
-		long PLT = Long.parseLong(FileUtils.getPropertyValue(settingsPath,"PLT"));
+		long PLT = Long.parseLong(fileUtils.getPropertyValue(settingsPath,"PLT"));
 		driver.manage().timeouts().pageLoadTimeout(PLT, TimeUnit.SECONDS);
-		eTest.log(Status.INFO,"PLT:"+PLT);
+		LogReport.log(eTest, log4j, "PLT:"+PLT, Status.INFO);
 		
-		long STO = Long.parseLong(FileUtils.getPropertyValue(settingsPath,"STO"));
+		long STO = Long.parseLong(fileUtils.getPropertyValue(settingsPath,"STO"));
 		driver.manage().timeouts().setScriptTimeout(STO,TimeUnit.SECONDS);
-		eTest.log(Status.INFO,"STO:"+STO);
+		LogReport.log(eTest, log4j, "STO:"+STO, Status.INFO);
 		
-		String appUrl=FileUtils.getPropertyValue(settingsPath, "AppUrl");
+		String appUrl=fileUtils.getPropertyValue(settingsPath, "AppUrl");
 		driver.get(appUrl);
-		eTest.log(Status.INFO,"appUrl:"+appUrl);
+		LogReport.log(eTest, log4j,"appUrl:"+appUrl, Status.INFO);
 		
 		driver.manage().deleteAllCookies();
-		eTest.log(Status.INFO,"Cookies Deleted");
+		LogReport.log(eTest, log4j, "Cookies Deleted", Status.INFO);
 		
 		driver.manage().window().maximize();
-		eTest.log(Status.INFO,"Browser Maximized");
+		LogReport.log(eTest, log4j, "Browser Maximized", Status.INFO);
 		
+		LogReport.log(eTest, log4j, "Precondition completed", Status.INFO);
 	}
 	
 	@AfterMethod
 	public void postCondition(ITestResult result)
 	{
 		driver.quit();
-		eTest.log(Status.INFO,"Browser is closed");
+		LogReport.log(eTest, log4j, "Browser is closed", Status.INFO);
 		
 		int status = result.getStatus();
 		if(status==1)
 		{
-			eTest.log(Status.PASS,"Test executed successfully");
+			LogReport.log(eTest, log4j,"Test executed successfully", Status.PASS);
 		}
 		else if(status==2)
 		{
-			eTest.log(Status.FAIL,"Test execution failed");
+			LogReport.log(eTest, log4j,"Test execution failed", Status.FAIL);
 		}
 		else if(status==3)
 		{
-			eTest.log(Status.SKIP,"Test execution is Skipped");
+			LogReport.log(eTest, log4j, "Test execution is Skipped", Status.SKIP);
 		}
 		else
 		{
-			eTest.log(Status.WARNING,"Test execution is unknown");
+			LogReport.log(eTest, log4j, "Test execution is unknown", Status.WARNING);
 		}
+		LogReport.log(eTest, log4j, "Postcondition completed", Status.INFO);
 	}
 	
 	@DataProvider
 	public Iterator<String[]> getDataFromXL(Method method)
 	{
-		/*1. Data should be present in input.xlsx
-		 *2. sheet name should be same as test method name
-		 *3. 1st row in xl should be column names .and rest should be data 
-		 */
+		LogReport.log(eTest, log4j, "XL DP", Status.INFO);
 		String sheet=method.getName();
-		Iterator<String[]> data = FileUtils.getDataFromXLForDP(INPUT_XLPATH,sheet);
+		Iterator<String[]> data=dbUtils.getDataFromXLtoDP(INPUT_XLPATH, sheet);
+		LogReport.log(eTest, log4j, "XL path:"+INPUT_XLPATH+" XL Sheet:"+sheet, Status.INFO);
 		return data;
 	}
 	
 	@DataProvider
 	public Iterator<String[]>  getDataFromCSV(Method method) throws Exception
 	{
-		/*1. Data should be present in test method.csv
-		 *2. 1st row in csv should be column names, and rest should be data 
-		 */
-		String path=DATA_PATH+method.getName()+".csv";
-		Iterator<String[]> data =FileUtils.getDataFromCSVForDP(path);
 		
+		LogReport.log(eTest, log4j, "CSV DP", Status.INFO);
+		String path=DATA_PATH+method.getName()+".csv";
+		Iterator<String[]> data =fileUtils.getDataFromCSVForDP(path);
+		LogReport.log(eTest, log4j, "CSV path:"+path, Status.INFO);
 		return data;
 		
 	}
-	
-	//HOME WORK: add data provider which takes the data from DB
+
+	@DataProvider
+	public Iterator<String[]>  getDataFromDB(Method method) throws Exception
+	{
+		LogReport.log(eTest, log4j, "MYSQL DP", Status.INFO);
+		String dbURL=fileUtils.getPropertyValue(settingsPath,"DB_URL");
+		String un=fileUtils.getPropertyValue(settingsPath,"DB_UN");
+		String pw=fileUtils.getPropertyValue(settingsPath,"DB_PW");
+		String query="select * from "+method.getName();
+		Iterator<String[]> data =dbUtils.getDataFromMySQLToDP(dbURL, un,pw,query );
+		return data;
+		
+	}
 }

@@ -9,14 +9,14 @@ import org.apache.log4j.spi.RootLogger;
 import org.openqa.selenium.WebElement;
 
 import com.aventstack.extentreports.ExtentTest;
-
+//TODO --Reporting and Aa case typing
 public class RobotUtil {
 
 	Robot robot;
 	public ExtentTest eTest;
-	public Logger log4j= RootLogger.getRootLogger();
+	public Logger log4j;
 	
-	public RobotUtil(ExtentTest eTest)
+	public RobotUtil(ExtentTest eTest,Logger log4j)
 	{
 		try 
 		{
@@ -27,6 +27,7 @@ public class RobotUtil {
 		}
 		
 		this.eTest=eTest;
+		this.log4j=log4j;
 	}
 	
 	public void click(int x,int width,int y)

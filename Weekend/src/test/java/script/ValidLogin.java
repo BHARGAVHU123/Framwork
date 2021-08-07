@@ -1,24 +1,18 @@
 package script;
 
-import java.lang.reflect.Method;
-import java.util.Iterator;
-
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import generic.BaseTest;
-import generic.FileUtils;
 import pages.LoginPage;
 
 public class ValidLogin extends BaseTest
 {	
 
-	@Test(dataProvider = "getDataFromCSV")
+	@Test(dataProvider = "getDataFromXL")
 	public void testValidLogin(String un,String pw)
 	{
-		LoginPage loginPage=new LoginPage(driver, eTest);
+		LoginPage loginPage=new LoginPage(driver, eTest,log4j);
 		loginPage.setUserName(un);
-		loginPage.setPassord(pw);
+		loginPage.setPassword(pw);
 		loginPage.clickLogin();
 	}
 }

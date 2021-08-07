@@ -4,13 +4,9 @@ import java.util.ArrayList;
 
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
-
-/*To Rerun the Failed Test
- * 
- */
+//todo report
 public class RetryTestRun implements IRetryAnalyzer
 {
-	//list of failed methods which are  re-executed
 	ArrayList<String> testList=new ArrayList<String>();
 	
 	public boolean retry(ITestResult result) {

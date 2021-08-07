@@ -2,10 +2,7 @@ package generic;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.ITest;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -44,7 +41,7 @@ public class TestListener implements ITestListener {
 		
 		String timeStamp=getTimeStamp();
 		String filePath=IConstant.IMG_PATH+timeStamp;
-		ScreenShot.getScreenShot(driver, filePath);//get the page screenshot
+		baseTest.screenShot.getScreenShot(driver, filePath);//get the page screenshot
 		Media media = MediaEntityBuilder.createScreenCaptureFromPath("./../images/"+timeStamp+".png").build();
 		eTest.fail(media);//add it to extent report
 		

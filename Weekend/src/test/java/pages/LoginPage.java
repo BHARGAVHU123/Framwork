@@ -1,5 +1,6 @@
 package pages;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,33 +13,30 @@ import generic.WebUtil;
 public class LoginPage extends BasePage
 {
 	
-	public LoginPage(WebDriver driver, ExtentTest eTest) 
+	public LoginPage(WebDriver driver, ExtentTest eTest,Logger log4j)
 	{
-		super(driver, eTest);
+		super(driver, eTest,log4j);
 	}
 
-	@FindBy(id="username")
+	@FindBy(name="username")
 	private WebElement unTB;
 	
 	@FindBy(name="pwd")
 	private WebElement pwTB;
 	
 	@FindBy(xpath="//div[text()='Login ']")
-	private WebElement loginBTN;;
+	private WebElement loginBTN;
 	
 	public void setUserName(String un)
 	{
-		webUtil.sendKeys(unTB, un);
+		unTB.sendKeys(un);
 	}
-	
-	public void setPassord(String pw)
+	public void setPassword(String pw)
 	{
-		webUtil.sendKeys(pwTB, pw);
+		pwTB.sendKeys(pw);
 	}
 	
-	public void clickLogin()
-	{
-		webUtil.click(loginBTN);
+	public void clickLogin() {
+		loginBTN.click();
 	}
-	
 }

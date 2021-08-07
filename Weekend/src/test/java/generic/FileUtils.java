@@ -12,13 +12,27 @@ import java.util.Properties;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
+import org.apache.log4j.Logger;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
+import com.aventstack.extentreports.ExtentTest;
+//TODO steps reporting
+//TODO json methods
 public class FileUtils
 {
-	public static String getPropertyValue(String path,String key)
+	public ExtentTest eTest;
+	public Logger log4j;
+	
+	public FileUtils(ExtentTest eTest,Logger log4j)
+	{
+		this.eTest=eTest;
+		this.log4j=log4j;
+	}
+	
+	
+	public String getPropertyValue(String path,String key)
 	{
 		String value="";
 		
@@ -35,7 +49,7 @@ public class FileUtils
 		return value;
 	}
 	
-	public static String getXL_CellData(String path,String sheet,int r,int c)
+	public String getXL_CellData(String path,String sheet,int r,int c)
 	{
 		String v="";
 		try 
@@ -51,7 +65,7 @@ public class FileUtils
 		return v;
 	}
 	
-	public static int getXL_RowCount(String path,String sheet)
+	public int getXL_RowCount(String path,String sheet)
 	{
 		int rowCount=0;
 		try 
@@ -67,7 +81,7 @@ public class FileUtils
 		return rowCount;
 	}
 
-	public static int getXL_ColumnCount(String path,String sheet,int row)
+	public int getXL_ColumnCount(String path,String sheet,int row)
 	{
 		int colCount=0;
 		try 
@@ -82,7 +96,7 @@ public class FileUtils
 		}
 		return colCount;
 	}
-	public static Iterator<String[]> getDataFromXLForDP(String path,String sheetName) {
+	public Iterator<String[]> getDataFromXLForDP(String path,String sheetName) {
 		ArrayList<String[]> dataList=new ArrayList<String[]>();
 		try {
 		Workbook wb = WorkbookFactory.create(new FileInputStream(path));
@@ -114,7 +128,7 @@ public class FileUtils
 		return iData;
 	}
 	
-	public static void setXL_CellValue(String path,String sheet,int row,int col,String value) {
+	public void setXL_CellValue(String path,String sheet,int row,int col,String value) {
 		try
 		{
 			Workbook wb = WorkbookFactory.create(new FileInputStream(path));
@@ -133,7 +147,7 @@ public class FileUtils
 		}
 	}
 	
-	public static LinkedHashMap<String,String> getDataFromCSV(String path,int row)
+	public LinkedHashMap<String,String> getDataFromCSV(String path,int row)
 	{
 		LinkedHashMap<String, String> map=new LinkedHashMap<String, String>();
 		try 
@@ -157,7 +171,7 @@ public class FileUtils
 		return map;
 	}
 	
-	public static ArrayList<LinkedHashMap<String, String>> getAllDataFromCSV(String path) throws Exception
+	public ArrayList<LinkedHashMap<String, String>> getAllDataFromCSV(String path) throws Exception
 	{
 		ArrayList<LinkedHashMap<String, String>> listMap=new ArrayList<LinkedHashMap<String, String>>();
 		CSVParser csvContent = CSVParser.parse(new FileReader(path), CSVFormat.DEFAULT);
@@ -181,7 +195,7 @@ public class FileUtils
 		return listMap;
 	}
 	
-	public static Iterator<String[]> getDataFromCSVForDP(String path) throws Exception
+	public Iterator<String[]> getDataFromCSVForDP(String path) throws Exception
 	{
 		ArrayList<String[]> dataList=new ArrayList<String[]>();
 		CSVParser csvContent = CSVParser.parse(new FileReader(path), CSVFormat.DEFAULT);

@@ -2,25 +2,25 @@ package generic;
 
 
 import org.apache.log4j.Logger;
-import org.apache.log4j.spi.RootLogger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+//todo reporting
 public class JSUtil {
 	public WebDriver driver;
 	public JavascriptExecutor jse;
 	public ExtentTest eTest;
-	public Logger log4j= RootLogger.getRootLogger();
+	public Logger log4j;
 	
-	public JSUtil(WebDriver driver,ExtentTest eTest)
+	public JSUtil(WebDriver driver,ExtentTest eTest,Logger log4j)
 	{
 		this.driver=driver;
 		jse=(JavascriptExecutor)driver;
 		this.eTest=eTest;
+		this.log4j=log4j;
 	}
 	
 	
