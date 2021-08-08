@@ -14,105 +14,6 @@
       <![CDATA[Extent Test Created]]>
     </line>
     <line>
-      <![CDATA[Using Grid?:YES]]>
-    </line>
-    <line>
-      <![CDATA[Using Grid]]>
-    </line>
-    <line>
-      <![CDATA[hubURL:http://192.168.1.3:4444/wd/hub]]>
-    </line>
-    <line>
-      <![CDATA[Browser:chrome]]>
-    </line>
-    <line>
-      <![CDATA[Browser launched in grid:chrome]]>
-    </line>
-    <line>
-      <![CDATA[ETO:60]]>
-    </line>
-    <line>
-      <![CDATA[ITO:60]]>
-    </line>
-    <line>
-      <![CDATA[PLT:60]]>
-    </line>
-    <line>
-      <![CDATA[STO:60]]>
-    </line>
-    <line>
-      <![CDATA[appUrl:https://demo.actitime.com/login.do]]>
-    </line>
-    <line>
-      <![CDATA[Cookies Deleted]]>
-    </line>
-    <line>
-      <![CDATA[Browser Maximized]]>
-    </line>
-    <line>
-      <![CDATA[Precondition completed]]>
-    </line>
-    <line>
-      <![CDATA[Browser is closed]]>
-    </line>
-    <line>
-      <![CDATA[Test executed successfully]]>
-    </line>
-    <line>
-      <![CDATA[Postcondition completed]]>
-    </line>
-    <line>
-      <![CDATA[Extent Test Created]]>
-    </line>
-    <line>
-      <![CDATA[Using Grid?:YES]]>
-    </line>
-    <line>
-      <![CDATA[Using Grid]]>
-    </line>
-    <line>
-      <![CDATA[hubURL:http://192.168.1.3:4444/wd/hub]]>
-    </line>
-    <line>
-      <![CDATA[Browser:chrome]]>
-    </line>
-    <line>
-      <![CDATA[Browser launched in grid:chrome]]>
-    </line>
-    <line>
-      <![CDATA[ETO:60]]>
-    </line>
-    <line>
-      <![CDATA[ITO:60]]>
-    </line>
-    <line>
-      <![CDATA[PLT:60]]>
-    </line>
-    <line>
-      <![CDATA[STO:60]]>
-    </line>
-    <line>
-      <![CDATA[appUrl:https://demo.actitime.com/login.do]]>
-    </line>
-    <line>
-      <![CDATA[Cookies Deleted]]>
-    </line>
-    <line>
-      <![CDATA[Browser Maximized]]>
-    </line>
-    <line>
-      <![CDATA[Precondition completed]]>
-    </line>
-    <line>
-      <![CDATA[Browser is closed]]>
-    </line>
-    <line>
-      <![CDATA[Test executed successfully]]>
-    </line>
-    <line>
-      <![CDATA[Postcondition completed]]>
-    </line>
-    <line>
       <![CDATA[XL DP]]>
     </line>
     <line>
@@ -125,7 +26,16 @@
       <![CDATA[Using Grid?:YES]]>
     </line>
     <line>
+      <![CDATA[Using Grid?:YES]]>
+    </line>
+    <line>
       <![CDATA[Using Grid]]>
+    </line>
+    <line>
+      <![CDATA[Using Grid]]>
+    </line>
+    <line>
+      <![CDATA[hubURL:http://192.168.1.3:4444/wd/hub]]>
     </line>
     <line>
       <![CDATA[hubURL:http://192.168.1.3:4444/wd/hub]]>
@@ -134,7 +44,76 @@
       <![CDATA[Browser:firefox]]>
     </line>
     <line>
+      <![CDATA[Browser:chrome]]>
+    </line>
+    <line>
+      <![CDATA[Browser launched in grid:chrome]]>
+    </line>
+    <line>
+      <![CDATA[ETO:60]]>
+    </line>
+    <line>
+      <![CDATA[ITO:60]]>
+    </line>
+    <line>
+      <![CDATA[PLT:60]]>
+    </line>
+    <line>
+      <![CDATA[STO:60]]>
+    </line>
+    <line>
       <![CDATA[Browser launched in grid:firefox]]>
+    </line>
+    <line>
+      <![CDATA[ETO:60]]>
+    </line>
+    <line>
+      <![CDATA[ITO:60]]>
+    </line>
+    <line>
+      <![CDATA[PLT:60]]>
+    </line>
+    <line>
+      <![CDATA[STO:60]]>
+    </line>
+    <line>
+      <![CDATA[appUrl:https://demo.actitime.com/login.do]]>
+    </line>
+    <line>
+      <![CDATA[Cookies Deleted]]>
+    </line>
+    <line>
+      <![CDATA[Browser Maximized]]>
+    </line>
+    <line>
+      <![CDATA[Precondition completed]]>
+    </line>
+    <line>
+      <![CDATA[Browser is closed]]>
+    </line>
+    <line>
+      <![CDATA[Test executed successfully]]>
+    </line>
+    <line>
+      <![CDATA[Postcondition completed]]>
+    </line>
+    <line>
+      <![CDATA[Extent Test Created]]>
+    </line>
+    <line>
+      <![CDATA[Using Grid?:YES]]>
+    </line>
+    <line>
+      <![CDATA[Using Grid]]>
+    </line>
+    <line>
+      <![CDATA[hubURL:http://192.168.1.3:4444/wd/hub]]>
+    </line>
+    <line>
+      <![CDATA[Browser:chrome]]>
+    </line>
+    <line>
+      <![CDATA[Browser launched in grid:chrome]]>
     </line>
     <line>
       <![CDATA[ETO:60]]>
@@ -198,6 +177,27 @@
     </line>
     <line>
       <![CDATA[STO:60]]>
+    </line>
+    <line>
+      <![CDATA[appUrl:https://demo.actitime.com/login.do]]>
+    </line>
+    <line>
+      <![CDATA[Cookies Deleted]]>
+    </line>
+    <line>
+      <![CDATA[Browser Maximized]]>
+    </line>
+    <line>
+      <![CDATA[Precondition completed]]>
+    </line>
+    <line>
+      <![CDATA[Browser is closed]]>
+    </line>
+    <line>
+      <![CDATA[Test executed successfully]]>
+    </line>
+    <line>
+      <![CDATA[Postcondition completed]]>
     </line>
     <line>
       <![CDATA[appUrl:https://demo.actitime.com/login.do]]>
@@ -224,12 +224,12 @@
       <![CDATA[Extent report published]]>
     </line>
   </reporter-output>
-  <suite name="RegressionSuite" duration-ms="39639" started-at="2021-08-07T13:33:36Z" finished-at="2021-08-07T13:34:15Z">
+  <suite name="RegressionSuite" duration-ms="23074" started-at="2021-08-07T13:40:07Z" finished-at="2021-08-07T13:40:30Z">
     <groups>
     </groups>
-    <test name="ChromeTest" duration-ms="19018" started-at="2021-08-07T13:33:36Z" finished-at="2021-08-07T13:33:55Z">
+    <test name="ChromeTest" duration-ms="18585" started-at="2021-08-07T13:40:07Z" finished-at="2021-08-07T13:40:25Z">
       <class name="script.ValidLogin">
-        <test-method status="PASS" signature="preCondition(java.lang.String, java.lang.String, org.testng.ITestResult)[pri:0, instance:script.ValidLogin@5a8e6209]" name="preCondition" is-config="true" duration-ms="9543" started-at="2021-08-07T13:33:36Z" finished-at="2021-08-07T13:33:46Z">
+        <test-method status="PASS" signature="preCondition(java.lang.String, java.lang.String, org.testng.ITestResult)[pri:0, instance:script.ValidLogin@5a8e6209]" name="preCondition" is-config="true" duration-ms="9264" started-at="2021-08-07T13:40:07Z" finished-at="2021-08-07T13:40:17Z">
           <params>
             <param index="0">
               <value>
@@ -292,7 +292,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method status="PASS" signature="testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@5a8e6209]" name="testValidLogin" duration-ms="316" started-at="2021-08-07T13:33:46Z" data-provider="getDataFromXL" finished-at="2021-08-07T13:33:46Z">
+        <test-method status="PASS" signature="testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@5a8e6209]" name="testValidLogin" duration-ms="320" started-at="2021-08-07T13:40:17Z" data-provider="getDataFromXL" finished-at="2021-08-07T13:40:17Z">
           <params>
             <param index="0">
               <value>
@@ -308,7 +308,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:script.ValidLogin@5a8e6209]" name="postCondition" is-config="true" duration-ms="67" started-at="2021-08-07T13:33:46Z" finished-at="2021-08-07T13:33:46Z">
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:script.ValidLogin@5a8e6209]" name="postCondition" is-config="true" duration-ms="61" started-at="2021-08-07T13:40:17Z" finished-at="2021-08-07T13:40:17Z">
           <params>
             <param index="0">
               <value>
@@ -328,7 +328,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- postCondition -->
-        <test-method status="PASS" signature="preCondition(java.lang.String, java.lang.String, org.testng.ITestResult)[pri:0, instance:script.ValidLogin@5a8e6209]" name="preCondition" is-config="true" duration-ms="8166" started-at="2021-08-07T13:33:46Z" finished-at="2021-08-07T13:33:55Z">
+        <test-method status="PASS" signature="preCondition(java.lang.String, java.lang.String, org.testng.ITestResult)[pri:0, instance:script.ValidLogin@5a8e6209]" name="preCondition" is-config="true" duration-ms="8013" started-at="2021-08-07T13:40:17Z" finished-at="2021-08-07T13:40:25Z">
           <params>
             <param index="0">
               <value>
@@ -391,7 +391,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method status="PASS" signature="testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@5a8e6209]" name="testValidLogin" duration-ms="259" started-at="2021-08-07T13:33:55Z" data-provider="getDataFromXL" finished-at="2021-08-07T13:33:55Z">
+        <test-method status="PASS" signature="testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@5a8e6209]" name="testValidLogin" duration-ms="265" started-at="2021-08-07T13:40:25Z" data-provider="getDataFromXL" finished-at="2021-08-07T13:40:25Z">
           <params>
             <param index="0">
               <value>
@@ -407,7 +407,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:script.ValidLogin@5a8e6209]" name="postCondition" is-config="true" duration-ms="76" started-at="2021-08-07T13:33:55Z" finished-at="2021-08-07T13:33:55Z">
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:script.ValidLogin@5a8e6209]" name="postCondition" is-config="true" duration-ms="67" started-at="2021-08-07T13:40:25Z" finished-at="2021-08-07T13:40:25Z">
           <params>
             <param index="0">
               <value>
@@ -429,20 +429,20 @@
         </test-method> <!-- postCondition -->
       </class> <!-- script.ValidLogin -->
     </test> <!-- ChromeTest -->
-    <test name="FFTest" duration-ms="20606" started-at="2021-08-07T13:33:55Z" finished-at="2021-08-07T13:34:15Z">
+    <test name="FFTest" duration-ms="23074" started-at="2021-08-07T13:40:07Z" finished-at="2021-08-07T13:40:30Z">
       <class name="script.ValidLogin">
-        <test-method status="PASS" signature="initReport()[pri:0, instance:script.ValidLogin@3cef309d]" name="initReport" is-config="true" duration-ms="186" started-at="2021-08-07T13:33:36Z" finished-at="2021-08-07T13:33:36Z">
+        <test-method status="PASS" signature="initReport()[pri:0, instance:script.ValidLogin@3cef309d]" name="initReport" is-config="true" duration-ms="182" started-at="2021-08-07T13:40:07Z" finished-at="2021-08-07T13:40:07Z">
           <reporter-output>
             <line>
               <![CDATA[Extent report initialized]]>
             </line>
           </reporter-output>
         </test-method> <!-- initReport -->
-        <test-method status="PASS" signature="startGrid()[pri:0, instance:script.ValidLogin@3cef309d]" name="startGrid" is-config="true" duration-ms="0" started-at="2021-08-07T13:33:36Z" finished-at="2021-08-07T13:33:36Z">
+        <test-method status="PASS" signature="startGrid()[pri:0, instance:script.ValidLogin@3cef309d]" name="startGrid" is-config="true" duration-ms="0" started-at="2021-08-07T13:40:07Z" finished-at="2021-08-07T13:40:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startGrid -->
-        <test-method status="PASS" signature="preCondition(java.lang.String, java.lang.String, org.testng.ITestResult)[pri:0, instance:script.ValidLogin@3cef309d]" name="preCondition" is-config="true" duration-ms="9730" started-at="2021-08-07T13:33:55Z" finished-at="2021-08-07T13:34:05Z">
+        <test-method status="PASS" signature="preCondition(java.lang.String, java.lang.String, org.testng.ITestResult)[pri:0, instance:script.ValidLogin@3cef309d]" name="preCondition" is-config="true" duration-ms="10882" started-at="2021-08-07T13:40:07Z" finished-at="2021-08-07T13:40:18Z">
           <params>
             <param index="0">
               <value>
@@ -505,7 +505,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method status="PASS" signature="testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@3cef309d]" name="testValidLogin" duration-ms="337" started-at="2021-08-07T13:34:05Z" data-provider="getDataFromXL" finished-at="2021-08-07T13:34:05Z">
+        <test-method status="PASS" signature="testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@3cef309d]" name="testValidLogin" duration-ms="338" started-at="2021-08-07T13:40:18Z" data-provider="getDataFromXL" finished-at="2021-08-07T13:40:19Z">
           <params>
             <param index="0">
               <value>
@@ -521,7 +521,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:script.ValidLogin@3cef309d]" name="postCondition" is-config="true" duration-ms="404" started-at="2021-08-07T13:34:05Z" finished-at="2021-08-07T13:34:05Z">
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:script.ValidLogin@3cef309d]" name="postCondition" is-config="true" duration-ms="405" started-at="2021-08-07T13:40:19Z" finished-at="2021-08-07T13:40:19Z">
           <params>
             <param index="0">
               <value>
@@ -541,7 +541,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- postCondition -->
-        <test-method status="PASS" signature="preCondition(java.lang.String, java.lang.String, org.testng.ITestResult)[pri:0, instance:script.ValidLogin@3cef309d]" name="preCondition" is-config="true" duration-ms="9356" started-at="2021-08-07T13:34:05Z" finished-at="2021-08-07T13:34:15Z">
+        <test-method status="PASS" signature="preCondition(java.lang.String, java.lang.String, org.testng.ITestResult)[pri:0, instance:script.ValidLogin@3cef309d]" name="preCondition" is-config="true" duration-ms="10128" started-at="2021-08-07T13:40:19Z" finished-at="2021-08-07T13:40:29Z">
           <params>
             <param index="0">
               <value>
@@ -604,7 +604,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method status="PASS" signature="testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@3cef309d]" name="testValidLogin" duration-ms="334" started-at="2021-08-07T13:34:15Z" data-provider="getDataFromXL" finished-at="2021-08-07T13:34:15Z">
+        <test-method status="PASS" signature="testValidLogin(java.lang.String, java.lang.String)[pri:0, instance:script.ValidLogin@3cef309d]" name="testValidLogin" duration-ms="335" started-at="2021-08-07T13:40:29Z" data-provider="getDataFromXL" finished-at="2021-08-07T13:40:30Z">
           <params>
             <param index="0">
               <value>
@@ -620,7 +620,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:script.ValidLogin@3cef309d]" name="postCondition" is-config="true" duration-ms="419" started-at="2021-08-07T13:34:15Z" finished-at="2021-08-07T13:34:15Z">
+        <test-method status="PASS" signature="postCondition(org.testng.ITestResult)[pri:0, instance:script.ValidLogin@3cef309d]" name="postCondition" is-config="true" duration-ms="396" started-at="2021-08-07T13:40:30Z" finished-at="2021-08-07T13:40:30Z">
           <params>
             <param index="0">
               <value>
@@ -640,7 +640,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- postCondition -->
-        <test-method status="PASS" signature="publishReport()[pri:0, instance:script.ValidLogin@3cef309d]" name="publishReport" is-config="true" duration-ms="252" started-at="2021-08-07T13:34:15Z" finished-at="2021-08-07T13:34:16Z">
+        <test-method status="PASS" signature="publishReport()[pri:0, instance:script.ValidLogin@3cef309d]" name="publishReport" is-config="true" duration-ms="267" started-at="2021-08-07T13:40:30Z" finished-at="2021-08-07T13:40:30Z">
           <reporter-output>
             <line>
               <![CDATA[Extent report published]]>

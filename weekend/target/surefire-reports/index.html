@@ -102,22 +102,22 @@
                     <div class="method-list-content passed suite-RegressionSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="script.ValidLogin" hash-for-method="testValidLogin(trainee, trainee)">testValidLogin(trainee, trainee)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="script.ValidLogin" hash-for-method="testValidLogin(admin, manager)">testValidLogin(admin, manager)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="script.ValidLogin" hash-for-method="testValidLogin(admin, manager)">testValidLogin(admin, manager)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="script.ValidLogin" hash-for-method="testValidLogin(trainee, trainee)">testValidLogin(trainee, trainee)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="script.ValidLogin" hash-for-method="testValidLogin(trainee, trainee)">testValidLogin(trainee, trainee)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="script.ValidLogin" hash-for-method="testValidLogin(admin, manager)">testValidLogin(admin, manager)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-RegressionSuite -->
@@ -140,22 +140,6 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testValidLogin(trainee, trainee)">
-                  </a> <!-- testValidLogin(trainee, trainee) -->
-                  <span class="method-name">testValidLogin</span>
-                  <span class="parameters">(trainee, trainee)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testValidLogin(admin, manager)">
-                  </a> <!-- testValidLogin(admin, manager) -->
-                  <span class="method-name">testValidLogin</span>
-                  <span class="parameters">(admin, manager)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="testValidLogin(admin, manager)">
                   </a> <!-- testValidLogin(admin, manager) -->
                   <span class="method-name">testValidLogin</span>
@@ -168,6 +152,22 @@
                   </a> <!-- testValidLogin(trainee, trainee) -->
                   <span class="method-name">testValidLogin</span>
                   <span class="parameters">(trainee, trainee)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testValidLogin(trainee, trainee)">
+                  </a> <!-- testValidLogin(trainee, trainee) -->
+                  <span class="method-name">testValidLogin</span>
+                  <span class="parameters">(trainee, trainee)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testValidLogin(admin, manager)">
+                  </a> <!-- testValidLogin(admin, manager) -->
+                  <span class="method-name">testValidLogin</span>
+                  <span class="parameters">(admin, manager)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -181,7 +181,7 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite verbose=&quot;0&quot; name=&quot;RegressionSuite&quot;&gt;
+&lt;suite verbose=&quot;0&quot; name=&quot;RegressionSuite&quot; parallel=&quot;tests&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;ChromeTest&quot; parallel=&quot;tests&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;parameter name=&quot;hubURL&quot; value=&quot;http://192.168.1.3:4444/wd/hub&quot;/&gt;
@@ -192,7 +192,7 @@
       &lt;class name=&quot;script.ValidLogin&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ChromeTest --&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;FFTest&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;FFTest&quot; parallel=&quot;tests&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
     &lt;parameter name=&quot;hubURL&quot; value=&quot;http://192.168.1.3:4444/wd/hub&quot;/&gt;
     &lt;packages&gt;
@@ -246,19 +246,19 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testValidLogin')
 data.setCell(0, 2, 'script.ValidLogin')
-data.setCell(0, 3, 337);
+data.setCell(0, 3, 338);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testValidLogin')
 data.setCell(1, 2, 'script.ValidLogin')
-data.setCell(1, 3, 334);
+data.setCell(1, 3, 335);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testValidLogin')
 data.setCell(2, 2, 'script.ValidLogin')
-data.setCell(2, 3, 316);
+data.setCell(2, 3, 320);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'testValidLogin')
 data.setCell(3, 2, 'script.ValidLogin')
-data.setCell(3, 3, 259);
+data.setCell(3, 3, 265);
 window.suiteTableData['RegressionSuite']= { tableData: data, tableDiv: 'times-div-RegressionSuite'}
 return data;
 }
@@ -296,59 +296,59 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-suite before">
                 <span class="method-name">startGrid</span>
-                <span class="method-start">186 ms</span>
+                <span class="method-start">182 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">preCondition(http://192.168.1.3:4444/wd/hub, chrome, [TestResult name=testValidLogin status=SUCCESS method=ValidL...)</span>
-                <span class="method-start">774 ms</span>
+                <span class="method-start">777 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">preCondition(http://192.168.1.3:4444/wd/hub, firefox, [TestResult name=testValidLogin status=SUCCESS method=Valid...)</span>
+                <span class="method-start">777 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testValidLogin(admin, manager)</span>
-                <span class="method-start">10317 ms</span>
+                <span class="method-start">10041 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">postCondition([TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin(java.lang.String, ja...)</span>
-                <span class="method-start">10634 ms</span>
+                <span class="method-start">10363 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">preCondition(http://192.168.1.3:4444/wd/hub, chrome, [TestResult name=testValidLogin status=SUCCESS method=ValidL...)</span>
-                <span class="method-start">10701 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testValidLogin(trainee, trainee)</span>
-                <span class="method-start">18867 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">postCondition([TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin(java.lang.String, ja...)</span>
-                <span class="method-start">19126 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">preCondition(http://192.168.1.3:4444/wd/hub, firefox, [TestResult name=testValidLogin status=SUCCESS method=Valid...)</span>
-                <span class="method-start">19243 ms</span>
+                <span class="method-start">10425 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testValidLogin(admin, manager)</span>
-                <span class="method-start">28974 ms</span>
+                <span class="method-start">11659 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">postCondition([TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin(java.lang.String, ja...)</span>
-                <span class="method-start">29312 ms</span>
+                <span class="method-start">11997 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">preCondition(http://192.168.1.3:4444/wd/hub, firefox, [TestResult name=testValidLogin status=SUCCESS method=Valid...)</span>
-                <span class="method-start">29716 ms</span>
+                <span class="method-start">12403 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testValidLogin(trainee, trainee)</span>
-                <span class="method-start">39072 ms</span>
+                <span class="method-start">18438 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">postCondition([TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin(java.lang.String, ja...)</span>
-                <span class="method-start">39406 ms</span>
+                <span class="method-start">18704 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testValidLogin(trainee, trainee)</span>
+                <span class="method-start">22531 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">postCondition([TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin(java.lang.String, ja...)</span>
+                <span class="method-start">22866 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">publishReport</span>
-                <span class="method-start">39829 ms</span>
+                <span class="method-start">23266 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
