@@ -94,9 +94,6 @@ public class BaseTest implements IConstant
 	public void preCondition(@Optional(defaultHubURL)String hubURL,@Optional(defaultBrowser)String browser,ITestResult testResult) throws Exception
 	{
 		
-		System.out.println(System.getProperty("hub_ip"));
-		hubURL="http://"+System.getProperty("hub_ip")+":4444/wd/hub";
-		
 		String testName = testResult.getMethod().getMethodName();
 		eTest = extentReports.createTest(testName);
 		

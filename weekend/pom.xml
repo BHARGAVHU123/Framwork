@@ -13,9 +13,6 @@
           <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
           </suiteXmlFiles>
-           <systemPropertyVariables>
-                        <environment>${hub_ip}</environment>
-            </systemPropertyVariables>
         </configuration>
       </plugin>
 </plugins>
