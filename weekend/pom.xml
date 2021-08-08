@@ -13,6 +13,9 @@
           <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
           </suiteXmlFiles>
+          <systemPropertyVariables>
+                        <environment>${hub_url}</environment>
+            </systemPropertyVariables>
         </configuration>
       </plugin>
 </plugins>
